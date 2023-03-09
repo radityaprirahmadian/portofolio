@@ -1,0 +1,49 @@
+@import '/src/style/global';
+@import '/src/style/mixins';
+
+.thankyou-section {
+  min-height: 80vh;
+  background-color: $base-orange;
+  padding: 10vh 5vh;
+  position: relative;
+
+  .big-text {
+    color: $base-blue;
+    font-weight: 700;
+    // display: flex;
+    // align-items: center;
+    font-size: 17vh;
+
+    @include max-mobile {
+      font-size: 10vh;
+      line-height: 90%;
+    }
+
+    .dot {
+      height: 2vh;
+      width: 2vh;
+      background-color: $base-blue;
+      display: inline-block;
+      border-radius: 20%;
+    }
+  }
+
+  .notes {
+    font-size: 2vh;
+    position: absolute;
+    bottom: 5vh;
+    left: 5vh;
+    color: $base-blue;
+    font-weight: 600;
+    font-style: italic;
+
+    @include max-mobile {
+      position: absolute;
+      width: 70vw;
+    }
+
+    span {
+      color: $base-cream;
+    }
+  }
+}

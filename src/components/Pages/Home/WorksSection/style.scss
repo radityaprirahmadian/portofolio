@@ -1,0 +1,131 @@
+@import '/src/style/global';
+@import '/src/style/mixins';
+
+.works-section {
+  min-height: 100vh;
+  display: flex;
+
+  @include max-mobile {
+    flex-direction: column;
+  }
+
+  .left-section {
+    background-color: $base-cream;
+    flex-basis: 50%;
+    padding: 5vh;
+    text-align: left;
+
+    @include max-mobile {
+      flex-basis: 100%;
+    }
+
+    .title {
+      font-size: 7vh;
+      color: $base-blue;
+      font-weight: bold;
+      position: sticky;
+      top: 3vh;
+      margin-bottom: 20vh;
+
+      @include max-mobile {
+        margin-bottom: 0;
+        font-size: 5vh;
+      }
+    }
+
+    .decoration-1 {
+      height: 10vh;
+      width: 100%;
+      background-color: $base-green;
+      color: $base-cream;
+
+      @include max-mobile {
+        height: 7vh;
+      }
+    }
+  }
+
+  .right-section {
+    background-color: $base-orange;
+    flex-basis: 50%;
+    padding: 5vh;
+
+    @include max-mobile {
+      flex-basis: 100%;
+    }
+
+    .item-container {
+      padding: 5vh;
+
+      @include max-mobile {
+        padding: 0;
+        padding-bottom: 5vh;
+      }
+
+      .image-container {
+        width: calc(100% - 2vh);
+        aspect-ratio: 3/2;
+        position: relative;
+
+        .image {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+          z-index: 9999;
+          border: 0.6vh solid $base-orange;
+          position: relative;
+        }
+
+        .shadow {
+          content: '';
+          width: 100%;
+          aspect-ratio: 3/2;
+          background: $base-blue;
+          position: absolute;
+          z-index: 998;
+          left: 2vh;
+          top: 2vh;
+        }
+      }
+
+      .title-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5vh;
+
+        @include max-mobile {
+          margin-top: 2.5vh;
+        }
+
+        .title {
+          font-size: 3vh;
+          font-weight: 600;
+          color: $base-cream;
+
+          @include max-mobile {
+            font-size: 2.5vh;
+            width: 80%;
+          }
+        }
+
+        .button {
+          width: 10vh;
+          color: $base-blue;
+          padding: 1vh;
+          font-size: 2vh;
+          text-align: center;
+          cursor: pointer;
+          background-color: $base-cream;
+          font-weight: 700;
+
+          @include max-mobile {
+            width: 8vh;
+            padding: 1vh;
+            font-size: 1.6vh;
+          }
+        }
+      }
+    }
+  }
+}

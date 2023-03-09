@@ -1,0 +1,96 @@
+@import '/src/style/global';
+@import '/src/style/mixins';
+
+.tools-section {
+  min-height: 100vh;
+  display: flex;
+
+  @include max-mobile {
+    flex-direction: column-reverse;
+  }
+
+  .left-section {
+    background-color: $base-blue;
+    flex-basis: 50%;
+    padding: 10vh 10vh 5vh 0;
+
+    @include max-mobile {
+      flex-basis: 100%;
+    }
+
+    .item {
+      height: 13vh;
+      width: 100%;
+      background-color: $base-cream;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      border-radius: 0px 2vh 2vh 0px;
+      margin-bottom: 3vh;
+      position: relative;
+      z-index: 9999;
+
+      @include max-mobile {
+        height: 10vh;
+      }
+
+      .logo-container {
+        text-align: center;
+        flex-basis: 50%;
+
+        .logo {
+          width: 10vh;
+
+          @include max-mobile {
+            width: 8vh;
+          }
+        }
+      }
+
+      .title {
+        font-size: 3.2vh;
+        font-weight: 600;
+        color: $base-blue;
+
+        @include max-mobile {
+          font-size: 2.2vh;
+        }
+      }
+    }
+  }
+
+  .right-section {
+    background-color: rgba(244, 241, 222, 0.3);
+    flex-basis: 50%;
+    padding: 5vh;
+    text-align: left;
+
+    @include max-mobile {
+      flex-basis: 100%;
+    }
+
+    .title {
+      font-size: 7vh;
+      color: $base-blue;
+      font-weight: bold;
+      position: sticky;
+      top: 3vh;
+
+      @include max-mobile {
+        font-size: 5vh;
+      }
+    }
+
+    .decoration-1 {
+      height: 10vh;
+      width: 100%;
+      background-color: $base-green;
+      overflow: hidden;
+      color: $base-cream;
+
+      @include max-mobile {
+        height: 7vh;
+      }
+    }
+  }
+}
