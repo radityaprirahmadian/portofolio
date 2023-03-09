@@ -59,7 +59,7 @@ const ToolsSection = () => {
         <div className="title">
           <Title hidden={'-15vh'}> The things</Title>
           <div className="decoration-1">
-            <Title hidden={'-30vh'}>that I work</Title>
+            <Title hidden={'-20vh'}>that I work</Title>
           </div>
           <Title hidden={'-7vh'}>with</Title>
           <div className="decoration-1"></div>

@@ -19,6 +19,10 @@
       flex-basis: 100%;
     }
 
+    @include max-tablet {
+      padding: 4vh;
+    }
+
     .title {
       font-size: 7vh;
       color: $base-blue;
@@ -31,6 +35,10 @@
         margin-bottom: 0;
         font-size: 5vh;
       }
+
+      @include max-tablet {
+        font-size: 5vw;
+      }
     }
 
     .decoration-1 {
@@ -41,6 +49,10 @@
 
       @include max-mobile {
         height: 7vh;
+      }
+
+      @include max-tablet {
+        height: 8vw;
       }
     }
   }
@@ -54,10 +66,19 @@
       flex-basis: 100%;
     }
 
+    @include max-tablet {
+      padding: 4vh;
+    }
+
     .item-container {
       padding: 5vh;
 
       @include max-mobile {
+        padding: 0;
+        padding-bottom: 5vh;
+      }
+
+      @include max-tablet {
         padding: 0;
         padding-bottom: 5vh;
       }
@@ -85,6 +106,16 @@
           z-index: 998;
           left: 2vh;
           top: 2vh;
+
+          @include max-mobile {
+            left: 1.7vh;
+            top: 1.7vh;
+          }
+
+          @include max-tablet {
+            left: 1.6vh;
+            top: 1.6vh;
+          }
         }
       }
 
@@ -98,13 +129,23 @@
           margin-top: 2.5vh;
         }
 
+        @include max-tablet {
+          margin-top: 2vh;
+        }
+
         .title {
           font-size: 3vh;
           font-weight: 600;
           color: $base-cream;
+          padding-right: 2vh;
 
           @include max-mobile {
             font-size: 2.5vh;
+            width: 80%;
+          }
+
+          @include max-tablet {
+            font-size: 1.5vh;
             width: 80%;
           }
         }
@@ -123,6 +164,12 @@
             width: 8vh;
             padding: 1vh;
             font-size: 1.6vh;
+          }
+
+          @include max-tablet {
+            width: 5.5vh;
+            padding: 1vh;
+            font-size: 1.4vh;
           }
         }
       }

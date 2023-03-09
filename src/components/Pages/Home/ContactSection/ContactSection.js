@@ -17,8 +17,8 @@ const ContactSection = () => {
     <div className="contact-section">
       <div className="left-section">
         <div className="title">
-          <Title hidden={'-30vh'}>Contact</Title>
-          <Title hidden={'-20vh'}>Me Here!</Title>
+          <Title hidden={'-20vh'}>Contact</Title>
+          <Title hidden={'-14vh'}>Me Here!</Title>
         </div>
         <i className="notes">P.S. Don’t hesitate to contact me. Maybe we can be a good partner?</i>
       </div>
@@ -27,7 +27,7 @@ const ContactSection = () => {
           <LeftItem
             title={'Raditya Prirahmadian'}
             image={linkedin}
-            link={'www.linkedin.com/in/radityaprirahmadian/'}
+            link={'in/radityaprirahmadian/'}
           />
           <RightItem title={'082295108710'} image={wa} link={'https://wa.me/6282295108710'} />
           <LeftItem title={'RadityaP'} image={github} link={'github.com/RadityaP'} />

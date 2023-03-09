@@ -19,13 +19,25 @@
       flex-basis: 100%;
     }
 
+    @include max-tablet {
+      padding: 4vh;
+    }
+
     .top {
       margin-bottom: 25vh;
       top: 10vh;
       position: sticky;
 
       @include max-mobile {
-        margin-bottom: 50vh;
+        margin-bottom: 35vh;
+      }
+
+      @include max-small-mobile {
+        margin-bottom: 40vh;
+      }
+
+      @include max-tablet {
+        margin-bottom: 45vh;
       }
 
       .big-text {
@@ -35,6 +47,10 @@
 
         @include max-mobile {
           font-size: 12vh;
+        }
+
+        @include max-tablet {
+          font-size: 8vh;
         }
       }
     }
@@ -48,6 +64,10 @@
         font-size: 3.8vh;
       }
 
+      @include max-tablet {
+        font-size: 3.2vw;
+      }
+
       .title-text {
         font-size: 5.5vh;
         color: $base-green;
@@ -55,6 +75,10 @@
 
         @include max-mobile {
           font-size: 4.5vh;
+        }
+
+        @include max-tablet {
+          font-size: 3.6vh;
         }
       }
     }
@@ -65,7 +89,12 @@
       font-size: 3vh;
 
       @include max-mobile {
-        font-size: 2.7vh;
+        font-size: 2.5vh;
+      }
+
+      @include max-tablet {
+        margin-top: 60vh;
+        font-size: 2.1vh;
       }
     }
   }
@@ -80,6 +109,10 @@
       flex-basis: 100%;
     }
 
+    @include max-tablet {
+      padding: 4vh;
+    }
+
     .foto {
       width: 30vh;
       margin-bottom: 20vh;
@@ -89,6 +122,10 @@
       @include max-mobile {
         width: 20vh;
         margin-bottom: 0;
+      }
+
+      @include max-tablet {
+        width: 20vh;
       }
     }
   }

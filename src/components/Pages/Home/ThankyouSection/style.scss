@@ -7,6 +7,10 @@
   padding: 10vh 5vh;
   position: relative;
 
+  @include max-tablet {
+    padding: 10vh 4vh;
+  }
+
   .big-text {
     color: $base-blue;
     font-weight: 700;
@@ -16,6 +20,11 @@
 
     @include max-mobile {
       font-size: 10vh;
+      line-height: 90%;
+    }
+
+    @include max-tablet {
+      font-size: 9vh;
       line-height: 90%;
     }
 
@@ -40,6 +49,12 @@
     @include max-mobile {
       position: absolute;
       width: 70vw;
+    }
+
+    @include max-tablet {
+      position: absolute;
+      width: 80vw;
+      font-size: 1.7vh;
     }
 
     span {

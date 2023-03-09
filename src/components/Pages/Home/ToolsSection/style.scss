@@ -18,6 +18,10 @@
       flex-basis: 100%;
     }
 
+    @include max-tablet {
+      padding: 8vh 8vh 4vh 0;
+    }
+
     .item {
       height: 13vh;
       width: 100%;
@@ -34,6 +38,10 @@
         height: 10vh;
       }
 
+      @include max-tablet {
+        height: 9vh;
+      }
+
       .logo-container {
         text-align: center;
         flex-basis: 50%;
@@ -43,6 +51,10 @@
 
           @include max-mobile {
             width: 8vh;
+          }
+
+          @include max-tablet {
+            width: 8vw;
           }
         }
       }
@@ -54,6 +66,10 @@
 
         @include max-mobile {
           font-size: 2.2vh;
+        }
+
+        @include max-tablet {
+          font-size: 2.4vw;
         }
       }
     }
@@ -69,6 +85,10 @@
       flex-basis: 100%;
     }
 
+    @include max-tablet {
+      padding: 4vh;
+    }
+
     .title {
       font-size: 7vh;
       color: $base-blue;
@@ -78,6 +98,10 @@
 
       @include max-mobile {
         font-size: 5vh;
+      }
+
+      @include max-tablet {
+        font-size: 5vw;
       }
     }
 
@@ -90,6 +114,10 @@
 
       @include max-mobile {
         height: 7vh;
+      }
+
+      @include max-tablet {
+        height: 8vw;
       }
     }
   }

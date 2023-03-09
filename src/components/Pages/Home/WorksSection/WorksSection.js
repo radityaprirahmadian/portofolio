@@ -19,7 +19,7 @@ const works = [
   },
   {
     image: ppbs,
-    title: 'Peminjaman PPBS',
+    title: 'Peminjaman PPBS Yang Ke dua',
   },
   {
     image: ppbs,
