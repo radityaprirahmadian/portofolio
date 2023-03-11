@@ -22,25 +22,12 @@
     }
 
     @include max-tablet {
-      padding: 4vh;
+      padding: 3vw;
     }
 
     .title {
-      font-size: 7vh;
-      color: $base-blue;
-      font-weight: bold;
-      position: sticky;
-      top: 3vh;
+      @include title($base-blue);
       margin-bottom: 20vh;
-
-      @include max-mobile {
-        margin-bottom: 0;
-        font-size: 5vh;
-      }
-
-      @include max-tablet {
-        font-size: 5vw;
-      }
     }
 
     .decoration-1 {
@@ -54,7 +41,7 @@
       }
 
       @include max-tablet {
-        height: 8vw;
+        height: 6.5vw;
       }
     }
   }
@@ -71,7 +58,7 @@
     }
 
     @include max-tablet {
-      padding: 4vh;
+      padding: 3vw;
     }
 
     .item-container {
@@ -84,7 +71,7 @@
 
       @include max-tablet {
         padding: 0;
-        padding-bottom: 5vh;
+        padding-bottom: 5vw;
       }
 
       .image-container {
@@ -99,6 +86,10 @@
           z-index: 9999;
           border: 0.6vh solid $base-orange;
           position: relative;
+
+          @include max-tablet {
+            border: 0.5vw solid $base-orange;
+          }
         }
 
         .shadow {
@@ -108,17 +99,17 @@
           background: $base-blue;
           position: absolute;
           z-index: 998;
-          left: 2vh;
-          top: 2vh;
+          left: 1vw;
+          top: 1vw;
 
           @include max-mobile {
-            left: 1.7vh;
-            top: 1.7vh;
+            left: 3.2vw;
+            top: 3.2vw;
           }
 
           @include max-tablet {
-            left: 1.6vh;
-            top: 1.6vh;
+            left: 1.6vw;
+            top: 1.6vw;
           }
         }
       }
@@ -134,7 +125,7 @@
         }
 
         @include max-tablet {
-          margin-top: 2vh;
+          margin-top: 2vw;
         }
 
         .title {
@@ -149,8 +140,8 @@
           }
 
           @include max-tablet {
-            font-size: 1.5vh;
-            width: 80%;
+            font-size: 2vw;
+            width: 70%;
           }
         }
 
@@ -171,9 +162,9 @@
           }
 
           @include max-tablet {
-            width: 5.5vh;
-            padding: 1vh;
-            font-size: 1.4vh;
+            width: 5.5vw;
+            padding: 1vw;
+            font-size: 1.4vw;
           }
         }
       }

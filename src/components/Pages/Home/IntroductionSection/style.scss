@@ -22,12 +22,12 @@
     }
 
     @include max-tablet {
-      padding: 4vh;
+      padding: 3vw;
     }
 
     .top {
       margin-bottom: 25vh;
-      top: 10vh;
+      top: calc(50% - 25vh);
       position: sticky;
 
       @include max-mobile {
@@ -39,7 +39,7 @@
       }
 
       @include max-tablet {
-        margin-bottom: 45vh;
+        margin-bottom: 60%;
       }
 
       .big-text {
@@ -52,7 +52,8 @@
         }
 
         @include max-tablet {
-          font-size: 8vh;
+          // font-size: 8vh;
+          font-size: 8vw;
         }
       }
     }
@@ -80,7 +81,7 @@
         }
 
         @include max-tablet {
-          font-size: 3.6vh;
+          font-size: 3.2vw;
         }
       }
     }
@@ -95,8 +96,8 @@
       }
 
       @include max-tablet {
-        margin-top: 60vh;
-        font-size: 2.1vh;
+        margin-top: 80vh;
+        font-size: 2vw;
       }
     }
   }
@@ -114,14 +115,14 @@
     }
 
     @include max-tablet {
-      padding: 4vh;
+      padding: 3vw;
     }
 
     .foto {
       width: 30vh;
       margin-bottom: 20vh;
       position: sticky;
-      top: 35vh;
+      top: calc(50% - 25vh);
 
       @include max-mobile {
         width: 20vh;
@@ -129,7 +130,8 @@
       }
 
       @include max-tablet {
-        width: 20vh;
+        // top: 15vw;
+        width: 22vw;
       }
     }
   }

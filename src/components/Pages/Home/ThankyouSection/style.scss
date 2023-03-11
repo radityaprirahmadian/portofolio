@@ -24,7 +24,7 @@
     }
 
     @include max-tablet {
-      font-size: 9vh;
+      font-size: 9vw;
       line-height: 90%;
     }
 
@@ -34,6 +34,11 @@
       background-color: $base-blue;
       display: inline-block;
       border-radius: 20%;
+
+      @include max-tablet {
+        height: 2vw;
+        width: 2vw;
+      }
     }
   }
 
@@ -54,7 +59,7 @@
     @include max-tablet {
       position: absolute;
       width: 80vw;
-      font-size: 1.7vh;
+      font-size: 1.6vw;
     }
 
     span {

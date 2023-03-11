@@ -15,3 +15,19 @@
     @content;
   }
 }
+
+@mixin title($color) {
+  font-size: 7vh;
+  color: $color;
+  font-weight: bold;
+  position: sticky;
+  top: 3vh;
+
+  @include max-mobile {
+    font-size: 5vh;
+  }
+
+  @include max-tablet {
+    font-size: 4vw;
+  }
+}

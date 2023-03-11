@@ -31,22 +31,16 @@
     }
 
     .title {
-      font-size: 7vh;
-      color: $base-cream;
-      font-weight: bold;
-      position: sticky;
+      @include title($base-cream);
       margin-bottom: 8vh;
-      top: 3vh;
 
       @include max-mobile {
         position: static;
         margin-bottom: 0;
-        font-size: 5vh;
       }
 
       @include max-tablet {
         margin-bottom: 12vh;
-        font-size: 5vw;
       }
     }
 
@@ -63,7 +57,7 @@
 
       @include max-tablet {
         width: 70%;
-        font-size: 1.6vh;
+        font-size: 1.6vw;
       }
     }
   }
@@ -103,25 +97,16 @@
           justify-content: flex-end;
 
           .title {
-            margin-right: 3vh;
-            font-size: 3.3vh;
-            font-weight: 600;
-            white-space: nowrap;
-            color: $base-blue;
             text-align: right;
+            margin-right: 3vh;
 
             @include max-mobile {
-              font-size: 2vh;
-              white-space: pre-wrap;
-              line-height: 120%;
               margin-right: 2vh;
             }
 
             @include max-tablet {
-              font-size: 1.5vh;
-              white-space: pre-wrap;
-              line-height: 120%;
-              margin-right: 1vh;
+              margin-left: 0;
+              margin-right: 1.5vw;
             }
 
             @include max-small-mobile {
@@ -130,28 +115,14 @@
 
             .link {
               text-align: right;
-              font-style: italic;
-              font-size: 1.6vh;
-
-              @include max-mobile {
-                font-size: 1.2vh;
-              }
-
-              @include max-tablet {
-                white-space: wrap;
-                font-size: 1vh;
-              }
-
-              @include max-small-mobile {
-                font-size: 1vh;
-              }
             }
           }
         }
       }
 
       .item-container {
-        width: 15vh;
+        // width: 15vh;
+        aspect-ratio: 1/1;
         height: 15vh;
         padding: 2vh;
         cursor: pointer;
@@ -165,18 +136,17 @@
         justify-content: flex-start;
 
         @include max-mobile {
-          width: 10vh;
           height: 10vh;
         }
 
         @include max-tablet {
-          width: 4.6vh;
-          height: 5vh;
-          padding: 1vh;
+          // width: 4vw;
+          height: 7vw;
+          margin-bottom: 3vw;
+          padding: 1vw;
         }
 
         @include max-small-mobile {
-          width: 8vh;
           height: 8vh;
         }
 
@@ -186,6 +156,10 @@
 
           @include max-mobile {
             height: 70%;
+          }
+
+          @include max-tablet {
+            height: 90%;
           }
 
           @include max-small-mobile {
@@ -207,10 +181,10 @@
           }
 
           @include max-tablet {
-            font-size: 1.5vh;
+            font-size: 2vw;
             white-space: pre-wrap;
             line-height: 120%;
-            margin-left: 1vh;
+            margin-left: 1.5vw;
           }
 
           @include max-small-mobile {
@@ -228,7 +202,7 @@
 
             @include max-tablet {
               white-space: wrap;
-              font-size: 1vh;
+              font-size: 1.2vw;
             }
 
             @include max-small-mobile {

@@ -22,7 +22,7 @@ const Item = ({ image, title, index }) => {
           animate={controls}
           variants={{
             visible: { x: 0, y: 0, transition: { duration: 0.2, ease: 'backOut', delay: 1 } },
-            hidden: { x: '-1vh', y: '-1vh' },
+            hidden: { x: '-1vw', y: '-1vw' },
           }}
         ></motion.div>
       </motion.div>
