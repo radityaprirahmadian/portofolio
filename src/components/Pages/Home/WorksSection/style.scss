@@ -28,6 +28,10 @@
     .title {
       @include title($base-blue);
       margin-bottom: 20vh;
+
+      @include max-mobile {
+        margin-bottom: 0;
+      }
     }
 
     .decoration-1 {
