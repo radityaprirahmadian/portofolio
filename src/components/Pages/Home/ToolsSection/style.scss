@@ -13,9 +13,11 @@
     background-color: $base-blue;
     flex-basis: 50%;
     padding: 10vh 10vh 5vh 0;
+    max-width: 50vw;
 
     @include max-mobile {
       flex-basis: 100%;
+      max-width: 100vw;
     }
 
     @include max-tablet {
@@ -80,9 +82,11 @@
     flex-basis: 50%;
     padding: 5vh;
     text-align: left;
+    max-width: 50vw;
 
     @include max-mobile {
       flex-basis: 100%;
+      max-width: 100vw;
     }
 
     @include max-tablet {
