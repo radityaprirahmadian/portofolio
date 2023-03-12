@@ -103,8 +103,8 @@
           background: $base-blue;
           position: absolute;
           z-index: 998;
-          left: 1vw;
-          top: 1vw;
+          left: 1.1vw;
+          top: 1.1vw;
 
           @include max-mobile {
             left: 3.2vw;
@@ -148,7 +148,9 @@
             width: 70%;
           }
         }
-
+        a {
+          text-decoration: none;
+        }
         .button {
           width: 10vh;
           color: $base-blue;

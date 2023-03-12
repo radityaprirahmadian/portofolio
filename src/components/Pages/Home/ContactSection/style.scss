@@ -81,6 +81,10 @@
     .social-container {
       padding: 6vh;
 
+      a {
+        text-decoration: none;
+      }
+
       @include max-mobile {
         padding: 0;
       }

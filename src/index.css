@@ -19,3 +19,53 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+.privacy-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f2cc8f;
+  z-index: 9999999;
+}
+
+.privacy-screen-blue {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #3d405b;
+  z-index: 9999999;
+}
+
+.privacy-screen-cream {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f4f1de;
+  z-index: 9999999;
+}
+
+.privacy-screen-orange {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e07a5f;
+  z-index: 9999999;
+}
+
+.privacy-screen-green {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #81b29a;
+  z-index: 9999999;
+}

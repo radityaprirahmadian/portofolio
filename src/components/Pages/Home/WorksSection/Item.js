@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { useInView, useAnimation, motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Item = ({ image, title, index }) => {
   const controls = useAnimation();
@@ -28,14 +29,16 @@ const Item = ({ image, title, index }) => {
       </motion.div>
       <div className="title-container">
         <div className="title">{title}</div>
-        <motion.div
-          className="button"
-          initial={{ backgroundColor: '$base-cream' }}
-          whileTap={{ scale: 0.9 }}
-          whileHover={{ borderRadius: '10vh', transition: { ease: 'easeInOut' } }}
-        >
-          DETAILS
-        </motion.div>
+        <Link to={'/peminjaman-ppbs'}>
+          <motion.div
+            className="button"
+            initial={{ backgroundColor: '$base-cream' }}
+            whileTap={{ scale: 0.9 }}
+            whileHover={{ borderRadius: '10vh', transition: { ease: 'easeInOut' } }}
+          >
+            DETAILS
+          </motion.div>
+        </Link>
       </div>
     </motion.div>
   );

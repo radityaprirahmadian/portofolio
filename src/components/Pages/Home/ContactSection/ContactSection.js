@@ -9,8 +9,7 @@ import './style.scss';
 
 //component
 import Title from '../../../Element/Title';
-import LeftItem from './LeftItem';
-import RightItem from './RightItem';
+import Item from './Item';
 
 const ContactSection = () => {
   return (
@@ -24,14 +23,35 @@ const ContactSection = () => {
       </div>
       <div className="right-section">
         <div className="social-container">
-          <LeftItem
+          <Item
+            isLeft
             title={'Raditya Prirahmadian'}
             image={linkedin}
-            link={'in/radityaprirahmadian/'}
+            link={'https://www.linkedin.com/in/radityaprirahmadian/'}
+            linkText={'in/radityaprirahmadian/'}
           />
-          <RightItem title={'082295108710'} image={wa} link={'https://wa.me/6282295108710'} />
-          <LeftItem title={'RadityaP'} image={github} link={'github.com/RadityaP'} />
-          <RightItem title={'Raditya Prirahmadian'} image={gmail} link={'prirahmadian@gmail.com'} />
+          <Item
+            title={'082295108710'}
+            image={wa}
+            link={'https://wa.me/6282295108710'}
+            linkText={'https://wa.me/6282295108710'}
+            isRight
+          />
+          <Item
+            title={'RadityaP'}
+            image={github}
+            link={'https://www.github.com/RadityaP'}
+            linkText={'github.com/RadityaP'}
+            isLeft
+          />
+          <Item
+            title={'Raditya Prirahmadian'}
+            image={gmail}
+            link={'https://www.gmail.com'}
+            linkText={'prirahmadian@gmail.com'}
+            isEmail
+            isRight
+          />
         </div>
       </div>
     </div>

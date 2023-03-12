@@ -4,16 +4,17 @@ import ToolsSection from '../../components/Pages/Home/ToolsSection';
 import WorksSection from '../../components/Pages/Home/WorksSection';
 import ContactSection from '../../components/Pages/Home/ContactSection';
 import ThankyouSection from '../../components/Pages/Home/ThankyouSection';
+import Screen from '../../components/Element/Screen';
 
 const Index = () => {
   return (
-    <div>
+    <Screen>
       <IntroductionSection />
       <ToolsSection />
       <WorksSection />
       <ContactSection />
       <ThankyouSection />
-    </div>
+    </Screen>
   );
 };
 
