@@ -3,7 +3,10 @@ import React from 'react';
 import { useLocation, Route, Routes } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Home from '../pages/Home';
-import PeminjamanPPBS from '../pages/Works/PeminjamanPPBS/index';
+import PeminjamanPPBS from '../pages/Works/PeminjamanPPBS';
+import Owvix from '../pages/Works/Owvix';
+import Kemenko from '../pages/Works/Kemenko';
+import BNI from '../pages/Works/BNI';
 import ScrollToTop from './ScrollToTop';
 
 // const router = createBrowserRouter(
@@ -21,6 +24,9 @@ const AvailableRoutes = () => {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />}></Route>
           <Route path="/peminjaman-ppbs" element={<PeminjamanPPBS />} />
+          <Route path="/owvix" element={<Owvix />} />
+          <Route path="/simonev-kemenko" element={<Kemenko />} />
+          <Route path="/bni" element={<BNI />} />
         </Routes>
       </AnimatePresence>
     </ScrollToTop>

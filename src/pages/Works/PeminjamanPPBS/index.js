@@ -1,55 +1,35 @@
-import React, { useEffect, useRef } from 'react';
-import { useInView, useAnimation, motion } from 'framer-motion';
+import React from 'react';
 
 import Screen from '../../../components/Element/Screen';
 import Container from '../../../components/Pages/Works/Container';
 import peminjamanPPBS from '../../../assets/projects/ppbs.png';
 
 const Index = () => {
-  const controls = useAnimation();
-  const ref = useRef(null);
-  const isInView = useInView(ref);
-
-  useEffect(() => {
-    if (isInView) {
-      controls.start('visible');
-    }
-  }, [controls, isInView]);
-
   return (
     <Screen>
       <Container topImage={peminjamanPPBS} title={'Website Peminjaman PPBS'}>
-        <motion.div
-          ref={ref}
-          animate={controls}
-          initial="hidden"
-          variants={{
-            visible: { x: 0, transition: { duration: 0.4, ease: 'backOut' } },
-            hidden: { x: '-10vw' },
-          }}
-        >
-          <div className="section">
-            <div className="section-title">Description</div>
-            <div className="section-content">
-              This is a project where I create{' '}
-              <span className="highlight"> UI Design and front end of booking system</span> for
-              booking room in Gedung PPBS in Universitas Padjadjaran. Build with{' '}
-              <span className="highlight">Task Centered System Design method</span>, this website
-              consists of 4 different user roles with different task(basic user, building manager,
-              academic manager, and resource manager), and can be used by all of students in
-              Universitas Padjadjaran.
-            </div>
+        <div className="section">
+          <div className="section-title">Description</div>
+          <div className="section-content">
+            This is a project where I create{' '}
+            <span className="highlight"> UI Design and front end of booking system</span> for
+            booking room in Gedung PPBS in Universitas Padjadjaran. Build with{' '}
+            <span className="highlight">Task Centered System Design method</span>, this website
+            consists of 4 different user roles with different task(basic user, building manager,
+            academic manager, and resource manager), and can be used by all of students in
+            Universitas Padjadjaran.
           </div>
-          <div className="section">
-            <div className="section-title">Tech Stacks</div>
-            <div className="section-content">
-              Use <span className="highlight">Figma</span> for designing, and{' '}
-              <span className="highlight">ReactJS</span> and{' '}
-              <span className="highlight">ContextAPI React</span> for developing, also{' '}
-              <span className="highlight">Sass</span> for styling.
-            </div>
+        </div>
+        <div className="section">
+          <div className="section-title">Tech Stacks</div>
+          <div className="section-content">
+            Use <span className="highlight">Figma</span> for designing, and{' '}
+            <span className="highlight">ReactJS</span> and{' '}
+            <span className="highlight">ContextAPI React</span> for developing, also{' '}
+            <span className="highlight">SaSS</span> and <span className="highlight">Bootstrap</span>{' '}
+            for styling.
           </div>
-        </motion.div>
+        </div>
       </Container>
     </Screen>
   );

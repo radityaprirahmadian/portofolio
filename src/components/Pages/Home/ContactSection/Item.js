@@ -83,7 +83,6 @@ const Item = ({ link, linkText, image, title, isLeft, isRight, isEmail }) => {
     );
   };
 
-  console.log(navigator);
   if (isLeft) {
     return !isEmail ? (
       <Link to={link} target="_blank">

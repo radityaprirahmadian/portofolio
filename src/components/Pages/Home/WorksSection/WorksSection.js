@@ -2,6 +2,9 @@ import React from 'react';
 
 //assets
 import ppbs from '../../../../assets/projects/ppbs.png';
+import owvix from '../../../../assets/projects/owvix.png';
+import simonev from '../../../../assets/projects/simonev.png';
+import bni from '../../../../assets/projects/bni.png';
 import './style.scss';
 
 //component
@@ -11,19 +14,23 @@ import Title from '../../../Element/Title';
 const works = [
   {
     image: ppbs,
-    title: 'Peminjaman PPBS',
+    title: 'Website Peminjaman Ruangan PPBS',
+    link: '/peminjaman-ppbs',
   },
   {
-    image: ppbs,
-    title: 'Peminjaman PPBS',
+    image: owvix,
+    title: 'Landing Page Owvix',
+    link: '/owvix',
   },
   {
-    image: ppbs,
-    title: 'Peminjaman PPBS Yang Ke dua',
+    image: simonev,
+    title: 'Website SIMONEV KEMENKO PMK',
+    link: '/simonev-kemenko',
   },
   {
-    image: ppbs,
-    title: 'Peminjaman PPBS',
+    image: bni,
+    title: 'BNI x Traveloka and Bluebird',
+    link: '/bni',
   },
 ];
 
@@ -40,7 +47,15 @@ const WorksSection = () => {
       </div>
       <div className="right-section">
         {works.map((item, index) => {
-          return <Item image={item.image} title={item.title} key={index} index={index} />;
+          return (
+            <Item
+              image={item.image}
+              title={item.title}
+              key={index}
+              index={index}
+              link={item.link}
+            />
+          );
         })}
       </div>
     </div>

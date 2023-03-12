@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { useInView, useAnimation, motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-const Item = ({ image, title, index }) => {
+const Item = ({ image, title, index, link }) => {
   const controls = useAnimation();
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -29,7 +29,7 @@ const Item = ({ image, title, index }) => {
       </motion.div>
       <div className="title-container">
         <div className="title">{title}</div>
-        <Link to={'/peminjaman-ppbs'}>
+        <Link to={link}>
           <motion.div
             className="button"
             initial={{ backgroundColor: '$base-cream' }}
