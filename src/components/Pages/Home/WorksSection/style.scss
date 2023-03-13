@@ -80,7 +80,7 @@
 
       .image-container {
         width: calc(100% - 2vh);
-        aspect-ratio: 3/2;
+        aspect-ratio: 4/2;
         position: relative;
 
         .image {
@@ -99,7 +99,7 @@
         .shadow {
           content: '';
           width: 100%;
-          aspect-ratio: 3/2;
+          aspect-ratio: 4/2;
           background: $base-blue;
           position: absolute;
           z-index: 998;

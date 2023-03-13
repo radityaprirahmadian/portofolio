@@ -4,14 +4,16 @@
 .container {
   min-height: 100vh;
   min-width: 100vw;
+  padding-bottom: 20%;
   position: relative;
   background-color: $base-cream;
 
   .back-button {
-    width: 1.5rem;
+    width: 1.5vw;
     cursor: pointer;
-    height: 1.5rem;
+    height: 1.5vw;
     top: 2vw;
+    left: 2vw;
     position: fixed;
     z-index: 999;
     display: flex;
@@ -21,15 +23,26 @@
     overflow: hidden;
     flex-direction: row;
     white-space: nowrap;
-    left: 2vw;
-    padding: 1rem;
-    border-radius: 2rem;
+    padding: 1vw;
+    font-size: 1vw;
+    border-radius: 2vw;
     background-color: $base-orange;
     opacity: 0.4;
 
     @include max-mobile {
-      width: 1rem;
-      height: 1rem;
+      width: 3vh;
+      height: 3vh;
+      padding: 1vh;
+      font-size: 1.5vh;
+      border-radius: 5vh;
+    }
+
+    @include max-tablet {
+      width: 3vh;
+      height: 3vh;
+      font-size: 1vh;
+      font-size: 1vh;
+      border-radius: 5vh;
     }
 
     img {
@@ -37,8 +50,12 @@
     }
 
     span {
-      margin-left: 1rem;
+      margin-left: 1vw;
       font-weight: 600;
+
+      @include max-mobile {
+        margin-left: 1vh;
+      }
     }
   }
 
@@ -46,27 +63,27 @@
     // width: 100%;
     position: relative;
     z-index: 99;
-    padding: 5% 20%;
+    padding: 5% 20% 1%;
     color: $base-blue;
     overflow: hidden;
 
     @include max-mobile {
-      padding: 20% 5%;
+      padding: 10% 5% 10%;
     }
 
     @include max-tablet {
-      padding: 10% 5%;
+      padding: 10% 5% 5%;
     }
 
     .image-container {
       width: 100%;
       margin: auto;
       margin-bottom: 2vw;
-      border-radius: 2rem;
       overflow: hidden;
 
       @include max-mobile {
         width: 100%;
+        margin-bottom: 2vh;
       }
 
       @include max-tablet {
@@ -75,40 +92,69 @@
 
       img {
         width: 100%;
-        border-radius: 2rem;
+        border-radius: 2vw;
         object-fit: cover;
+
+        @include max-mobile {
+          border-radius: 5vh;
+        }
       }
     }
 
     .title {
-      font-size: 1.7rem;
+      font-size: 1.7vw;
       text-align: center;
       font-weight: 600;
+
+      @include max-mobile {
+        font-size: 2vh;
+      }
+
+      @include max-tablet {
+        font-size: 2vh;
+      }
     }
 
     .children {
       position: relative;
       z-index: 99;
-      margin-top: 2rem;
+      // margin-top: 2vw;
       overflow: hidden;
 
       .section {
-        margin-bottom: 3rem;
+        margin-top: 3vw;
 
         .section-title {
-          font-size: 1.4rem;
+          font-size: 1.4vw;
           font-weight: 600;
-          margin-bottom: 0.6rem;
+          margin-bottom: 0.6vw;
+
+          @include max-mobile {
+            font-size: 1.7vh;
+          }
+
+          @include max-tablet {
+            font-size: 1.7vh;
+          }
         }
 
         .section-content {
           text-align: justify;
+          font-size: 1.1vw;
+
+          @include max-mobile {
+            font-size: 1.5vh;
+          }
+
+          @include max-tablet {
+            font-size: 1.5vh;
+          }
 
           .highlight {
             background: $base-blue;
             color: $base-cream;
-            padding-left: 0.4rem;
-            padding-right: 0.4rem;
+            padding-left: 0.4vw;
+            padding-right: 0.4vw;
           }
 
           img {

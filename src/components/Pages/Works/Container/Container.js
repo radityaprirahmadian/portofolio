@@ -1,21 +1,11 @@
-import React, { useEffect, useRef } from 'react';
-import { motion, useAnimation, useInView } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-import './style.scss';
+import '../style.scss';
 import back from '../../../../assets/back.png';
 
-const Container = ({ topImage, title, children }) => {
-  const controls = useAnimation();
-  const ref = useRef(null);
-  const isInView = useInView(ref);
-
-  useEffect(() => {
-    if (isInView) {
-      controls.start('visible');
-    }
-  }, [controls, isInView]);
-
+const Container = ({ children }) => {
   return (
     <div className="container">
       <Link to={'/'}>
@@ -24,7 +14,7 @@ const Container = ({ topImage, title, children }) => {
           initial={{ opacity: 0.4 }}
           whileHover={{
             opacity: 1,
-            width: '10rem',
+            width: 'fit-content',
             transition: {
               duration: 0.4,
               type: 'spring',
@@ -40,25 +30,7 @@ const Container = ({ topImage, title, children }) => {
         </motion.div>
       </Link>
 
-      <div className="content">
-        <div className="image-container">
-          <img src={topImage} alt="top" className="top-image"></img>
-        </div>
-        <div className="title">{title}</div>
-        <div className="children">
-          <motion.div
-            ref={ref}
-            animate={controls}
-            initial="hidden"
-            variants={{
-              visible: { x: 0, transition: { duration: 0.4, ease: 'backOut' } },
-              hidden: { x: '-10vw' },
-            }}
-          >
-            {children}
-          </motion.div>
-        </div>
-      </div>
+      {children}
     </div>
   );
 };

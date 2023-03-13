@@ -1,0 +1,36 @@
+@import '/src/style/global';
+@import '/src/style/mixins';
+
+.tooltip-container {
+  position: fixed;
+  bottom: 2vw;
+  left: 50%;
+  z-index: 999999;
+  font-size: 0.9vw;
+  padding: 1vw 2vw;
+  border-radius: 1vw;
+  background-color: $base-blue;
+  border: 0.2vw solid $base-brown;
+  box-shadow: 1px 1px 11px 5px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+  color: white;
+  transform: translateX(-50%);
+
+  @include max-mobile {
+    bottom: 4vh;
+    font-size: 1.7vh;
+    padding: 1.5vh 2.5vh;
+    border-radius: 1vh;
+    border: 0.2vh solid $base-brown;
+    box-shadow: 1px 1px 11px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  @include max-tablet {
+    bottom: 4vh;
+    font-size: 1.7vh;
+    padding: 1.5vh 2.5vh;
+    border-radius: 1vh;
+    border: 0.2vh solid $base-brown;
+    box-shadow: 1px 1px 11px 5px rgba(0, 0, 0, 0.2);
+  }
+}

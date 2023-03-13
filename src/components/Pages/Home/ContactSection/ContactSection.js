@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 //assets
 import linkedin from '../../../../assets/social/linkedin.png';
@@ -10,8 +10,19 @@ import './style.scss';
 //component
 import Title from '../../../Element/Title';
 import Item from './Item';
+import Toaster from '../../../Element/Toaster';
 
 const ContactSection = () => {
+  const [isCopied, setIsCopied] = useState(false);
+
+  useEffect(() => {
+    if (isCopied) {
+      setTimeout(() => {
+        setIsCopied(false);
+      }, [2000]);
+    }
+  }, [isCopied]);
+
   return (
     <div className="contact-section">
       <div className="left-section">
@@ -47,13 +58,15 @@ const ContactSection = () => {
           <Item
             title={'Raditya Prirahmadian'}
             image={gmail}
-            link={'https://www.gmail.com'}
+            link={'prirahmadian@gmail.com'}
             linkText={'prirahmadian@gmail.com'}
             isEmail
+            setIsCopied={setIsCopied}
             isRight
           />
         </div>
       </div>
+      <Toaster text="Email Copied!" isVisible={isCopied} />
     </div>
   );
 };

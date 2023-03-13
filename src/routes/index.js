@@ -7,6 +7,7 @@ import PeminjamanPPBS from '../pages/Works/PeminjamanPPBS';
 import Owvix from '../pages/Works/Owvix';
 import Kemenko from '../pages/Works/Kemenko';
 import BNI from '../pages/Works/BNI';
+import Avana from '../pages/Works/Avana';
 import ScrollToTop from './ScrollToTop';
 
 // const router = createBrowserRouter(
@@ -27,6 +28,7 @@ const AvailableRoutes = () => {
           <Route path="/owvix" element={<Owvix />} />
           <Route path="/simonev-kemenko" element={<Kemenko />} />
           <Route path="/bni" element={<BNI />} />
+          <Route path="/avana" element={<Avana />} />
         </Routes>
       </AnimatePresence>
     </ScrollToTop>

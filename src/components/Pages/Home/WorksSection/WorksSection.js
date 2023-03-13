@@ -5,6 +5,8 @@ import ppbs from '../../../../assets/projects/ppbs.png';
 import owvix from '../../../../assets/projects/owvix.png';
 import simonev from '../../../../assets/projects/simonev.png';
 import bni from '../../../../assets/projects/bni.png';
+import avana from '../../../../assets/projects/avanadashboard.png';
+import docheck from '../../../../assets/projects/dochecklanding.png';
 import './style.scss';
 
 //component
@@ -12,6 +14,16 @@ import Item from './Item';
 import Title from '../../../Element/Title';
 
 const works = [
+  {
+    image: avana,
+    title: 'AVANA',
+    link: '/avana',
+  },
+  {
+    image: docheck,
+    title: 'Docheck',
+    link: '/peminjaman-ppbs',
+  },
   {
     image: ppbs,
     title: 'Website Peminjaman Ruangan PPBS',

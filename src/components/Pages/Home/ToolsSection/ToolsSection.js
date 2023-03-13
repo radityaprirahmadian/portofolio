@@ -7,6 +7,9 @@ import react from '../../../../assets/react.png';
 import figma from '../../../../assets/figma.png';
 import next from '../../../../assets/next.png';
 import tailwind from '../../../../assets/tailwind.png';
+import bootstrap from '../../../../assets/bootstrap.png';
+import cypress from '../../../../assets/cypress.png';
+import storybook from '../../../../assets/storybook.png';
 
 //component
 import Item from './Item';
@@ -14,24 +17,12 @@ import Title from '../../../Element/Title';
 
 const tools = [
   {
-    logo: redux,
-    title: 'React Redux',
-  },
-  {
     logo: react,
     title: 'React JS',
   },
   {
-    logo: figma,
-    title: 'Figma',
-  },
-  {
-    logo: next,
-    title: 'Next JS',
-  },
-  {
-    logo: tailwind,
-    title: 'Tailwind',
+    logo: redux,
+    title: 'React Redux',
   },
   {
     logo: figma,
@@ -44,6 +35,18 @@ const tools = [
   {
     logo: tailwind,
     title: 'Tailwind',
+  },
+  {
+    logo: bootstrap,
+    title: 'Bootstrap',
+  },
+  {
+    logo: storybook,
+    title: 'Storybook',
+  },
+  {
+    logo: cypress,
+    title: 'Cypress',
   },
 ];
 
