@@ -22,7 +22,7 @@ const works = [
   {
     image: docheck,
     title: 'Docheck',
-    link: '/peminjaman-ppbs',
+    link: '/docheck',
   },
   {
     image: ppbs,

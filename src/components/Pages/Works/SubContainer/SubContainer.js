@@ -16,7 +16,7 @@ const SubContainer = ({ topImage, title, children }) => {
   return (
     <div className="content">
       <div className="image-container">
-        <img src={topImage} alt="top" className="top-image"></img>
+        <img src={topImage} alt={title} className="top-image"></img>
       </div>
       <div className="title">{title}</div>
       <div className="children">

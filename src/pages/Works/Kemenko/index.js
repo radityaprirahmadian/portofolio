@@ -14,10 +14,10 @@ const Index = () => {
           topImage={simonev}
           title={'Website Sistem Monitoring Dan Evaluasi KEMENKO PMK'}
         >
-          <div className="image-container">
-            <img src={simonev2} alt="simonev 2" className="top-image"></img>
-          </div>
           <div className="section">
+            <div className="image-container">
+              <img src={simonev2} alt="simonev 2" className="top-image"></img>
+            </div>
             <div className="section-title">Description</div>
             <div className="section-content">
               This is a project where I create front end of{' '}
