@@ -2,7 +2,7 @@
 @import '/src/style/mixins';
 
 .thankyou-section {
-  min-height: 80vh;
+  // min-height: 80vh;
   background-color: $base-orange;
   padding: 10vh 5vh;
   position: relative;
@@ -17,10 +17,12 @@
     // display: flex;
     // align-items: center;
     font-size: 17vh;
+    margin-bottom: 40vh;
 
     @include max-mobile {
       font-size: 80px;
       line-height: 90%;
+      margin-bottom: 200px;
     }
 
     @include max-tablet {

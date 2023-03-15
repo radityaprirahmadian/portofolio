@@ -14,7 +14,7 @@ const Index = () => {
           <div className="section">
             <div className="section-title">Description</div>
             <div className="section-content">
-              This is website for managing all users, questionnaires, and another datas. I create
+              This is website for managing all users, questionnaires, and another datas. I create{' '}
               <span className="highlight">this website from scratch</span>. This website is used by
               Administrator only.
             </div>
