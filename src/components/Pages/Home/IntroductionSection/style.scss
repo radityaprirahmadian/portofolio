@@ -134,6 +134,8 @@
       @include max-mobile {
         width: 150px;
         margin-bottom: 0;
+        position: static;
+        top: 0;
         transform: translateY(0) !important;
       }
 
