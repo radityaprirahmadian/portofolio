@@ -24,6 +24,7 @@
     @include max-mobile {
       flex-basis: 100%;
       max-width: 100vw;
+      padding: 40px;
     }
 
     @include max-tablet {
@@ -52,6 +53,8 @@
 
       @include max-mobile {
         width: 100%;
+        font-size: 14px;
+        font-weight: 600;
         position: static;
       }
 
@@ -72,6 +75,7 @@
     @include max-mobile {
       flex-basis: 100%;
       max-width: 100vw;
+      padding: 40px;
     }
 
     @include max-tablet {
@@ -105,7 +109,8 @@
             margin-right: 3vh;
 
             @include max-mobile {
-              margin-right: 2vh;
+              // margin-right: 2vh;
+              margin-right: 12px;
             }
 
             @include max-tablet {
@@ -136,7 +141,8 @@
         justify-content: flex-start;
 
         @include max-mobile {
-          height: 10vh;
+          // height: 10vh;
+          height: 64px;
         }
 
         @include max-tablet {
@@ -144,10 +150,6 @@
           height: 7vw;
           margin-bottom: 3vw;
           padding: 1vw;
-        }
-
-        @include max-small-mobile {
-          height: 8vh;
         }
 
         .social-image {
@@ -175,9 +177,9 @@
           color: $base-blue;
 
           @include max-mobile {
-            font-size: 2.5vh;
+            font-size: 16px;
             white-space: pre-wrap;
-            margin-left: 2vh;
+            margin-left: 12px;
           }
 
           @include max-tablet {
@@ -187,26 +189,18 @@
             margin-left: 1.5vw;
           }
 
-          @include max-small-mobile {
-            font-size: 2.3vh;
-          }
-
           .link {
             font-style: italic;
             font-size: 1.6vh;
 
             @include max-mobile {
               white-space: wrap;
-              font-size: 1.2vh;
+              font-size: 10px;
             }
 
             @include max-tablet {
               white-space: wrap;
               font-size: 1.2vw;
-            }
-
-            @include max-small-mobile {
-              font-size: 1vh;
             }
           }
         }

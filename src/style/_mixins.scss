@@ -24,7 +24,8 @@
   top: 3vh;
 
   @include max-mobile {
-    font-size: 5vh;
+    // font-size: 5vh;
+    font-size: 36px;
   }
 
   @include max-tablet {

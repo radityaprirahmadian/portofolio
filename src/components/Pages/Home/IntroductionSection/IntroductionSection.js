@@ -32,7 +32,10 @@ const IntroductionSection = () => {
       </div>
       <motion.div className="right-section" variants={variants} animate={isHovered ? 'hover' : ''}>
         <motion.img
+          initial={{ scale: 1, y: '-50%' }}
+          animate={{ y: '-50%' }}
           whileHover={{
+            y: '-50%',
             scale: 1.1,
             transition: { type: 'spring', stiffness: 400, damping: 10 },
           }}

@@ -19,7 +19,7 @@
     font-size: 17vh;
 
     @include max-mobile {
-      font-size: 10vh;
+      font-size: 80px;
       line-height: 90%;
     }
 
@@ -54,6 +54,8 @@
     @include max-mobile {
       position: absolute;
       width: 70vw;
+      font-size: 16px;
+      font-weight: 700;
     }
 
     @include max-tablet {

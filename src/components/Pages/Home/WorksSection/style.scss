@@ -18,6 +18,7 @@
 
     @include max-mobile {
       flex-basis: 100%;
+      padding: 40px;
       max-width: 100vw;
     }
 
@@ -41,7 +42,8 @@
       color: $base-cream;
 
       @include max-mobile {
-        height: 7vh;
+        // height: 7vh;
+        height: 56px;
       }
 
       @include max-tablet {
@@ -59,6 +61,7 @@
     @include max-mobile {
       flex-basis: 100%;
       max-width: 100vw;
+      padding: 40px;
     }
 
     @include max-tablet {
@@ -70,7 +73,8 @@
 
       @include max-mobile {
         padding: 0;
-        padding-bottom: 5vh;
+        // padding-bottom: 5vh;
+        padding-bottom: 52px;
       }
 
       @include max-tablet {
@@ -91,6 +95,10 @@
           border: 0.6vh solid $base-orange;
           position: relative;
 
+          @include max-mobile {
+            border: 3.5px solid $base-orange;
+          }
+
           @include max-tablet {
             border: 0.5vw solid $base-orange;
           }
@@ -107,8 +115,11 @@
           top: 1.1vw;
 
           @include max-mobile {
-            left: 3.2vw;
-            top: 3.2vw;
+            // left: 3.2vw;
+            // top: 3.2vw;
+
+            left: 10px;
+            top: 10px;
           }
 
           @include max-tablet {
@@ -125,7 +136,8 @@
         margin-top: 5vh;
 
         @include max-mobile {
-          margin-top: 2.5vh;
+          // margin-top: 2.5vh;
+          margin-top: 24px;
         }
 
         @include max-tablet {
@@ -139,7 +151,8 @@
           padding-right: 2vh;
 
           @include max-mobile {
-            font-size: 2.5vh;
+            // font-size: 2.5vh;
+            font-size: 20px;
             width: 80%;
           }
 
@@ -151,6 +164,7 @@
         a {
           text-decoration: none;
         }
+
         .button {
           width: 10vh;
           color: $base-blue;
@@ -162,9 +176,13 @@
           font-weight: 700;
 
           @include max-mobile {
-            width: 8vh;
-            padding: 1vh;
-            font-size: 1.6vh;
+            // width: 8vh;
+            // padding: 1vh;
+            // font-size: 1.6vh;
+
+            width: 56px;
+            padding: 8px;
+            font-size: 12px;
           }
 
           @include max-tablet {
