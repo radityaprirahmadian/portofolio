@@ -16,7 +16,6 @@ const ThankyouSection = () => {
           className="dot"
         ></motion.span>
       </div>
-      {/* <div className="big-text">See you later!</div> */}
       <div className="notes">
         P.S.2 This is just <span>version 1</span> of my personal website, <span>version 2</span> is
         under development, going to live very soon.

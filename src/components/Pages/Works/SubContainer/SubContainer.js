@@ -25,7 +25,7 @@ const SubContainer = ({ topImage, title, children }) => {
           animate={controls}
           initial="hidden"
           variants={{
-            visible: { x: 0, transition: { duration: 0.4, ease: 'backOut' } },
+            visible: { x: 0, transition: { duration: 0.7, ease: 'backOut' } },
             hidden: { x: '-10vw' },
           }}
         >
