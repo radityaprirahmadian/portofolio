@@ -58,8 +58,8 @@ const ContactSection = () => {
           <Item
             title={'Raditya Prirahmadian'}
             image={gmail}
-            link={'word.radityaprirahmadian@gmail.com'}
-            linkText={'word.radityaprirahmadian@gmail.com'}
+            link={'work.radityaprirahmadian@gmail.com'}
+            linkText={'work.radityaprirahmadian@gmail.com'}
             isEmail
             setIsCopied={setIsCopied}
             isRight
