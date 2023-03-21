@@ -9,7 +9,7 @@ import dochecklanding from '../../../assets/projects/dochecklanding.png';
 const Index = () => {
   return (
     <Screen>
-      <Container>
+      <Container title={'DoCheck'}>
         <SubContainer topImage={docheckadmin} title={'Administrator Dashboard Docheck'}>
           <div className="section">
             <div className="section-title">Description</div>

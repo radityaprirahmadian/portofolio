@@ -11,7 +11,7 @@ import avanaripple from '../../../assets/projects/avanaripple.png';
 const Index = () => {
   return (
     <Screen>
-      <Container>
+      <Container title={'Avana'}>
         <SubContainer topImage={avanadashboard} title={'New Dashboard AVANA'}>
           <div className="section">
             <div className="section-title">Description</div>

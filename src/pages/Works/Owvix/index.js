@@ -8,7 +8,7 @@ import SubContainer from '../../../components/Pages/Works/SubContainer';
 const Index = () => {
   return (
     <Screen>
-      <Container>
+      <Container title={'Landing Page Owvix'}>
         <SubContainer topImage={owvix} title={'Landing Page Owvix'}>
           <div className="section">
             <div className="section-title">Description</div>

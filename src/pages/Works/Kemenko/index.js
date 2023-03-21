@@ -9,7 +9,7 @@ import SubContainer from '../../../components/Pages/Works/SubContainer';
 const Index = () => {
   return (
     <Screen>
-      <Container>
+      <Container title={'Simonev Kemenko PMK'}>
         <SubContainer
           topImage={simonev}
           title={'Website Sistem Monitoring Dan Evaluasi KEMENKO PMK'}

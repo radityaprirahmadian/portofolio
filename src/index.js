@@ -4,9 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
-ReactGA.initialize('G-VRKJYMEX2W', { debug: true });
+ReactGA.initialize('G-VRKJYMEX2W', {
+  gtagUrl: 'https://www.googletagmanager.com/gtag/js?id=G-VRKJYMEX2W',
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 import '../style.scss';
 import back from '../../../../assets/back.png';
 
-const Container = ({ children }) => {
+const Container = ({ title, children }) => {
+  useEffect(() => {
+    document.title = `${title} | Portofolio`;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <div className="container">
       <Link to={'/'}>
