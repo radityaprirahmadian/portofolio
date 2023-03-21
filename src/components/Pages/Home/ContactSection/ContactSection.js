@@ -37,6 +37,7 @@ const ContactSection = () => {
           <Item
             isLeft
             title={'Raditya Prirahmadian'}
+            name={'LinkedIn'}
             image={linkedin}
             link={'https://www.linkedin.com/in/radityaprirahmadian/'}
             linkText={'in/radityaprirahmadian/'}
@@ -44,6 +45,7 @@ const ContactSection = () => {
           <Item
             title={'082295108710'}
             image={wa}
+            name={'Whatsapp'}
             link={'https://wa.me/6282295108710'}
             linkText={'https://wa.me/6282295108710'}
             isRight
@@ -51,6 +53,7 @@ const ContactSection = () => {
           <Item
             title={'RadityaP'}
             image={github}
+            name={'Github'}
             link={'https://www.github.com/RadityaP'}
             linkText={'github.com/RadityaP'}
             isLeft
@@ -58,6 +61,7 @@ const ContactSection = () => {
           <Item
             title={'Raditya Prirahmadian'}
             image={gmail}
+            name={'Gmail'}
             link={'work.radityaprirahmadian@gmail.com'}
             linkText={'work.radityaprirahmadian@gmail.com'}
             isEmail
