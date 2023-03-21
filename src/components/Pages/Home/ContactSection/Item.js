@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import RightItem from './RightItem';
 import LeftItem from './LeftItem';
-import eventTracker from '../../../../utils/analytics';
+import { eventTracker } from '../../../../utils/analytics';
 
 const Item = ({ link, linkText, name, image, title, isLeft, isRight, isEmail, setIsCopied }) => {
   if (isLeft) {

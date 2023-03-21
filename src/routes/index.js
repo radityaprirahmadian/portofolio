@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 // import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
 import { useLocation, Route, Routes } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
@@ -10,6 +10,7 @@ import BNI from '../pages/Works/BNI';
 import Avana from '../pages/Works/Avana';
 import Docheck from '../pages/Works/DoCheck';
 import ScrollToTop from './ScrollToTop';
+import { pageViewTracker } from '../utils/analytics';
 
 // const router = createBrowserRouter(
 //   createRoutesFromElements([
@@ -20,6 +21,10 @@ import ScrollToTop from './ScrollToTop';
 
 const AvailableRoutes = () => {
   const location = useLocation();
+  useEffect(() => {
+    pageViewTracker(location.pathname + location.search);
+  }, [location.pathname, location.search]);
+
   return (
     <ScrollToTop>
       <AnimatePresence mode="wait" initial={false}>
