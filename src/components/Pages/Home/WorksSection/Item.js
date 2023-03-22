@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { useInView, useAnimation, motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { eventTracker } from '../../../../utils/analytics';
 
 const Item = ({ image, title, index, link }) => {
   const controls = useAnimation();
@@ -29,7 +30,12 @@ const Item = ({ image, title, index, link }) => {
       </motion.div>
       <div className="title-container">
         <div className="title">{title}</div>
-        <Link to={link}>
+        <Link
+          to={link}
+          onClick={() =>
+            eventTracker({ category: 'Work', label: `click_${title}`, action: `Click to ${title}` })
+          }
+        >
           <motion.div
             className="button"
             initial={{ backgroundColor: '$base-cream' }}

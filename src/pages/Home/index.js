@@ -14,8 +14,8 @@ const Index = () => {
   return (
     <Screen>
       <IntroductionSection />
-      <ToolsSection />
       <WorksSection />
+      <ToolsSection />
       <ContactSection />
       <ThankyouSection />
     </Screen>

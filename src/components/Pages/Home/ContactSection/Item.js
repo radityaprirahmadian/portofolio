@@ -11,7 +11,7 @@ const Item = ({ link, linkText, name, image, title, isLeft, isRight, isEmail, se
         to={link}
         target="_blank"
         onClick={() =>
-          eventTracker({ category: 'Contact', label: `click_${name}`, action: 'click_on_contact' })
+          eventTracker({ category: 'Contact', label: `click_${name}`, action: `Click on ${name}` })
         }
       >
         <LeftItem onClick={() => {}} title={title} linkText={linkText} image={image} />
@@ -19,7 +19,7 @@ const Item = ({ link, linkText, name, image, title, isLeft, isRight, isEmail, se
     ) : (
       <LeftItem
         onClick={() => {
-          eventTracker({ category: 'Contact', label: `click_${name}`, action: 'click_on_contact' });
+          eventTracker({ category: 'Contact', label: `click_${name}`, action: `Click on ${name}` });
           navigator.clipboard.writeText(link);
           setIsCopied(true);
         }}
@@ -36,7 +36,7 @@ const Item = ({ link, linkText, name, image, title, isLeft, isRight, isEmail, se
         to={link}
         target="_blank"
         onClick={() =>
-          eventTracker({ category: 'Contact', label: `click_${name}`, action: 'click_on_contact' })
+          eventTracker({ category: 'Contact', label: `click_${name}`, action: `Click on ${name}` })
         }
       >
         <RightItem title={title} linkText={linkText} image={image} />
@@ -44,7 +44,7 @@ const Item = ({ link, linkText, name, image, title, isLeft, isRight, isEmail, se
     ) : (
       <RightItem
         onClick={() => {
-          eventTracker({ category: 'Contact', label: `click_${name}`, action: 'click_on_contact' });
+          eventTracker({ category: 'Contact', label: `click_${name}`, action: `Click on ${name}` });
           navigator.clipboard.writeText(link);
           setIsCopied(true);
         }}
