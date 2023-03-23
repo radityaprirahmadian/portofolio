@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 //assets
 import './style.scss';
@@ -14,6 +14,7 @@ import storybook from '../../../../assets/storybook.png';
 //component
 import Item from './Item';
 import Title from '../../../Element/Title';
+import EventScrollTracker from '../../../Element/EventScrollTracker';
 
 const tools = [
   {
@@ -51,25 +52,28 @@ const tools = [
 ];
 
 const ToolsSection = () => {
+  const target = useRef(null);
   return (
-    <div className="tools-section">
-      <div className="left-section">
-        {tools.map((item, index) => {
-          return <Item title={item.title} logo={item.logo} key={index} index={index} />;
-        })}
-      </div>
-      <div className="right-section">
-        <div className="title">
-          <Title hidden={'-15vh'}> The things</Title>
-          <div className="decoration-1">
-            <Title hidden={'-20vh'}>that I work</Title>
-          </div>
-          <Title hidden={'-7vh'}>with</Title>
-          <div className="decoration-1"></div>
+    <EventScrollTracker targetRef={target} action={'Scroll To Tools Section'}>
+      <div className="tools-section" ref={target}>
+        <div className="left-section">
+          {tools.map((item, index) => {
+            return <Item title={item.title} logo={item.logo} key={index} index={index} />;
+          })}
         </div>
-        <div className="decoration-2"></div>
+        <div className="right-section">
+          <div className="title">
+            <Title hidden={'-15vh'}> The things</Title>
+            <div className="decoration-1">
+              <Title hidden={'-20vh'}>that I work</Title>
+            </div>
+            <Title hidden={'-7vh'}>with</Title>
+            <div className="decoration-1"></div>
+          </div>
+          <div className="decoration-2"></div>
+        </div>
       </div>
-    </div>
+    </EventScrollTracker>
   );
 };
 

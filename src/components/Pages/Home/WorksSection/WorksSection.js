@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 //assets
 import ppbs from '../../../../assets/projects/ppbs.png';
@@ -12,6 +12,7 @@ import './style.scss';
 //component
 import Item from './Item';
 import Title from '../../../Element/Title';
+import EventScrollTracker from '../../../Element/EventScrollTracker';
 
 const works = [
   {
@@ -47,30 +48,33 @@ const works = [
 ];
 
 const WorksSection = () => {
+  const target = useRef(null);
   return (
-    <div className="works-section">
-      <div className="left-section">
-        <div className="title">
-          <Title hidden={'-20vh'}>Projects</Title>
-          <div className="decoration-1">
-            <Title hidden={'-15vh'}>and Works</Title>
+    <EventScrollTracker targetRef={target} action={'Scroll To Work Section'}>
+      <div className="works-section" ref={target}>
+        <div className="left-section">
+          <div className="title">
+            <Title hidden={'-20vh'}>Projects</Title>
+            <div className="decoration-1">
+              <Title hidden={'-15vh'}>and Works</Title>
+            </div>
           </div>
         </div>
+        <div className="right-section">
+          {works.map((item, index) => {
+            return (
+              <Item
+                image={item.image}
+                title={item.title}
+                key={index}
+                index={index}
+                link={item.link}
+              />
+            );
+          })}
+        </div>
       </div>
-      <div className="right-section">
-        {works.map((item, index) => {
-          return (
-            <Item
-              image={item.image}
-              title={item.title}
-              key={index}
-              index={index}
-              link={item.link}
-            />
-          );
-        })}
-      </div>
-    </div>
+    </EventScrollTracker>
   );
 };
 

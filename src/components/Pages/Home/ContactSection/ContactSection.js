@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 //assets
 import linkedin from '../../../../assets/social/linkedin.png';
@@ -11,9 +11,11 @@ import './style.scss';
 import Title from '../../../Element/Title';
 import Item from './Item';
 import Toaster from '../../../Element/Toaster';
+import EventScrollTracker from '../../../Element/EventScrollTracker';
 
 const ContactSection = () => {
   const [isCopied, setIsCopied] = useState(false);
+  const target = useRef(null);
 
   useEffect(() => {
     if (isCopied) {
@@ -24,54 +26,58 @@ const ContactSection = () => {
   }, [isCopied]);
 
   return (
-    <div className="contact-section">
-      <div className="left-section">
-        <div className="title">
-          <Title hidden={'-20vh'}>Contact</Title>
-          <Title hidden={'-14vh'}>Me Here!</Title>
+    <EventScrollTracker targetRef={target} action="Scroll To Contact Section">
+      <div className="contact-section" ref={target}>
+        <div className="left-section">
+          <div className="title">
+            <Title hidden={'-20vh'}>Contact</Title>
+            <Title hidden={'-14vh'}>Me Here!</Title>
+          </div>
+          <i className="notes">
+            P.S. Don’t hesitate to contact me. Maybe we can be a good partner?
+          </i>
         </div>
-        <i className="notes">P.S. Don’t hesitate to contact me. Maybe we can be a good partner?</i>
-      </div>
-      <div className="right-section">
-        <div className="social-container">
-          <Item
-            isLeft
-            title={'Raditya Prirahmadian'}
-            name={'linkedIn'}
-            image={linkedin}
-            link={'https://www.linkedin.com/in/radityaprirahmadian/'}
-            linkText={'in/radityaprirahmadian/'}
-          />
-          <Item
-            title={'082295108710'}
-            image={wa}
-            name={'whatsapp'}
-            link={'https://wa.me/6282295108710'}
-            linkText={'https://wa.me/6282295108710'}
-            isRight
-          />
-          <Item
-            title={'RadityaP'}
-            image={github}
-            name={'github'}
-            link={'https://www.github.com/RadityaP'}
-            linkText={'github.com/RadityaP'}
-            isLeft
-          />
-          <Item
-            title={'Raditya Prirahmadian'}
-            image={gmail}
-            name={'gmail'}
-            link={'work.radityaprirahmadian@gmail.com'}
-            linkText={'work.radityaprirahmadian@gmail.com'}
-            isEmail
-            setIsCopied={setIsCopied}
-            isRight
-          />
+        <div className="right-section">
+          <div className="social-container">
+            <Item
+              isLeft
+              title={'Raditya Prirahmadian'}
+              name={'LinkedIn'}
+              image={linkedin}
+              link={'https://www.linkedin.com/in/radityaprirahmadian/'}
+              linkText={'in/radityaprirahmadian/'}
+            />
+            <Item
+              title={'082295108710'}
+              image={wa}
+              name={'Whatsapp'}
+              link={'https://wa.me/6282295108710'}
+              linkText={'https://wa.me/6282295108710'}
+              isRight
+            />
+            <Item
+              title={'RadityaP'}
+              image={github}
+              name={'Github'}
+              link={'https://www.github.com/RadityaP'}
+              linkText={'github.com/RadityaP'}
+              isLeft
+            />
+            <Item
+              title={'Raditya Prirahmadian'}
+              image={gmail}
+              name={'Gmail'}
+              link={'work.radityaprirahmadian@gmail.com'}
+              linkText={'work.radityaprirahmadian@gmail.com'}
+              isEmail
+              setIsCopied={setIsCopied}
+              isRight
+            />
+          </div>
         </div>
+        <Toaster text="Email Copied!" isVisible={isCopied} />
       </div>
-      <Toaster text="Email Copied!" isVisible={isCopied} />
-    </div>
+    </EventScrollTracker>
   );
 };
 
